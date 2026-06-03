@@ -1,0 +1,293 @@
+.page {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-family: var(--font-body);
+  padding: 6rem 8% 10rem;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 4rem;
+  color: var(--rose-gold);
+  text-decoration: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 5rem;
+  align-items: start;
+  margin-bottom: 7rem;
+}
+
+.heroText h1 {
+  font-family: var(--font-title);
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--off-white);
+  margin-bottom: 2rem;
+}
+
+.heroText p {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 0.95rem;
+  font-weight: 300;
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+.whatsappButton {
+  display: inline-block;
+  padding: 1.1rem 2.5rem;
+  text-decoration: none;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--rose-gold);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22rem;
+  transition: all 0.3s ease;
+}
+
+.whatsappButton:hover {
+  background: var(--rose-gold);
+  color: var(--bg);
+}
+
+.priceBox {
+  background: #151515;
+  border: 1px solid rgba(223, 188, 178, 0.15);
+  padding: 2rem;
+}
+
+.priceBox h2 {
+  font-family: var(--font-title);
+  font-size: 2.3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: var(--off-white);
+}
+
+.priceTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.priceTable tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.priceTable tr:last-child {
+  border-bottom: none;
+}
+
+.priceTable td {
+  padding: 1.2rem 0;
+  color: var(--off-white);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.priceTable td:last-child {
+  text-align: right;
+  color: var(--rose-gold);
+  white-space: nowrap;
+}
+
+.section h2 {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: var(--border);
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: var(--rose-gold);
+}
+
+.photo {
+  flex: 0 0 320px;
+  height: 380px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  border: 1px solid rgba(223, 188, 178, 0.15);
+  filter: saturate(0.85);
+}
+
+.notFound {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 2rem;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 4.5rem 6% 8rem;
+  }
+
+  .backLink {
+    margin-bottom: 3rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  .heroText h1 {
+    font-size: 3.2rem;
+  }
+
+  .heroText p {
+    max-width: 100%;
+  }
+
+  .priceBox {
+    padding: 1.8rem;
+  }
+
+   .photo {
+    flex: 0 0 300px;
+    width: 300px;
+    aspect-ratio: 4 / 5;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 3rem 5% 6rem;
+  }
+
+  .backLink {
+    margin-bottom: 2.5rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.18rem;
+  }
+
+  .hero {
+    gap: 2.5rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .heroText h1 {
+    font-size: 2.6rem;
+    line-height: 1.08;
+    margin-bottom: 1.5rem;
+  }
+
+  .heroText p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .whatsappButton {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.16rem;
+  }
+
+  .priceBox {
+    padding: 1.4rem;
+  }
+
+  .priceBox h2 {
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .priceTable td {
+    padding: 1rem 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .priceTable td:first-child {
+    padding-right: 1rem;
+  }
+
+  .priceTable td:last-child {
+    font-size: 0.86rem;
+  }
+
+  .section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+.carousel {
+    gap: 1rem;
+    margin-left: -5%;
+    margin-right: -5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    scroll-padding-left: 5%;
+  }
+
+  .photo {
+    flex: 0 0 86vw;
+    width: 86vw;
+    max-width: 360px;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    scroll-snap-align: center;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .heroText h1 {
+    font-size: 2.35rem;
+  }
+
+  .priceBox {
+    padding: 1.2rem;
+  }
+
+  .priceTable td {
+    display: block;
+    padding: 0.9rem 0 0.2rem;
+  }
+
+  .priceTable td:last-child {
+    text-align: left;
+    padding: 0 0 0.9rem;
+  }
+
+  .photo {
+    flex: 0 0 82vw;
+    height: 320px;
+  }
+}

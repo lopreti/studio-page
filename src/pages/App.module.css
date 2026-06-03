@@ -1,24 +1,27 @@
 /* Importação de fontes alternativas de luxo para dar o fit exato com Arsenica, Garet e Brittany */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500&family=Pinyon+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500&family=Pinyon+Script&display=swap");
 
 :root {
   /* Paleta Cinza Escuro Premium e Rose Gold fosco */
   --bg: #0b0b0b;
   --bg-soft: #111111;
   --card: #151515;
-  
+
   --rose-gold: #dfbcb2;
   --rose-muted: #af7d70;
   --off-white: #f5f5f5;
-  
+
   --text: #ffffff;
   --muted: #999999;
   --border: #1f1f1f;
 
   /* Mapeamento estrito baseado no padrão enviado */
-  --font-title: 'Cormorant Garamond', serif; /* Simula a elegância e contraste da Arsenica */
-  --font-body: 'Plus Jakarta Sans', sans-serif; /* Simula o visual geométrico e clean da Garet */
-  --font-cursive: 'Pinyon Script', cursive; /* Simula o traço fino e chic da Brittany */
+  --font-title:
+    "Cormorant Garamond", serif; /* Simula a elegância e contraste da Arsenica */
+  --font-body:
+    "Plus Jakarta Sans", sans-serif; /* Simula o visual geométrico e clean da Garet */
+  --font-cursive:
+    "Pinyon Script", cursive; /* Simula o traço fino e chic da Brittany */
 }
 
 * {
@@ -206,10 +209,8 @@ html {
   background-size: cover;
   background-position: center;
   border-radius: 2px;
-  filter: saturate(0.6) brightness(0.85);
   border: 1px solid rgba(223, 188, 178, 0.1);
 }
-
 /* Seção Sobre */
 .about {
   display: grid;
@@ -225,7 +226,6 @@ html {
   background-size: cover;
   background-position: center;
   border-radius: 2px;
-  filter: saturate(0.5) brightness(0.8);
 }
 
 .about h2 {
@@ -244,11 +244,18 @@ html {
 }
 
 /* Seções de Menu e Feed */
-.services, .gallery, .testimonials, .location {
+.services,
+.gallery,
+.testimonials,
+.location {
   padding: 10rem 8%;
 }
 
-.services h2, .gallery h2, .testimonials h2, .location h2, .ctaSection h2 {
+.services h2,
+.gallery h2,
+.testimonials h2,
+.location h2,
+.ctaSection h2 {
   font-family: var(--font-title);
   font-size: 3rem;
   font-weight: 300;
@@ -264,8 +271,11 @@ html {
 }
 
 .card {
-  background: var(--card);
-  border: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+
+  background: #181818;
+  border: 1px solid rgba(223, 188, 178, 0.15);
   padding: 2rem;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -279,7 +289,6 @@ html {
   margin-bottom: 1.8rem;
   background-size: cover;
   background-position: center;
-  filter: saturate(0.4) contrast(1.05) brightness(0.85);
 }
 
 .card h3 {
@@ -295,25 +304,6 @@ html {
   line-height: 1.8;
   font-size: 0.85rem;
   font-weight: 300;
-}
-
-/* Moodboard Editorial (Galeria) */
-.galleryGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.galleryItem {
-  height: 420px;
-  background-size: cover;
-  background-position: center;
-  filter: saturate(0.3) brightness(0.8);
-  transition: filter 0.6s ease;
-}
-
-.galleryItem:hover {
-  filter: saturate(0.6) brightness(0.9);
 }
 
 /* Testemunhos */
@@ -397,7 +387,7 @@ html {
   justify-content: center;
   align-items: center;
   color: var(--rose-gold);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
   transition: 0.3s;
   z-index: 999;
 }
@@ -406,40 +396,371 @@ html {
   background: var(--rose-gold);
   color: var(--bg);
 }
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-/* Responsividade Ajustada Mantendo Proporções Globais */
-@media(max-width: 1024px) {
-  .grid, .galleryGrid { grid-template-columns: repeat(2, 1fr); }
-  .hero h1 { font-size: 3.2rem; }
-  .hero { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
-  .hero p { margin: 0 auto 3rem auto; }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero p {
+    margin: 0 auto 3rem auto;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
 }
 
-@media(max-width: 768px) {
-  .menuBtn { display: block; }
-  .nav { display: none; }
-  
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    padding: 0.85rem 5%;
+    background: rgba(11, 11, 11, 0.78);
+  }
+
+  .logoContainer {
+    gap: 0.85rem;
+  }
+
+  .logoCircle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .logoCircle span {
+    font-size: 1.05rem;
+  }
+
+  .logoText h2 {
+    font-size: 1.45rem;
+  }
+
+  .logoText span {
+    font-size: 0.52rem;
+    letter-spacing: 0.28em;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
   .open {
     display: flex;
     position: absolute;
-    top: 76px;
+    top: 67px;
     left: 0;
     right: 0;
     background: var(--bg);
     flex-direction: column;
-    padding: 4rem 2rem;
-    gap: 2.5rem;
+    padding: 3rem 2rem;
+    gap: 2rem;
     border-bottom: 1px solid var(--border);
     align-items: center;
   }
 
-  .about { grid-template-columns: 1fr; gap: 4rem; }
-  .heroImage, .photoPlaceholder { height: 460px; }
-  .contactInfo { gap: 2rem; flex-direction: column; align-items: center; }
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 100svh;
+    padding: 7rem 6% 3rem;
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(11, 11, 11, 0.25) 0%,
+        rgba(11, 11, 11, 0.45) 38%,
+        rgba(11, 11, 11, 0.92) 100%
+      ),
+      url("https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000");
+    background-size: cover;
+    background-position: center top;
+    z-index: 0;
+  }
+
+  .hero > div:first-child {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .hero h1 {
+    max-width: 360px;
+    color: #ffffff;
+    font-size: clamp(2.65rem, 13vw, 4rem);
+    line-height: 0.98;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero h1 span {
+    color: #f0c8bc;
+  }
+
+  .hero p {
+    max-width: 340px;
+    margin: 0 0 1.8rem;
+    color: #e6e6e6;
+    font-size: 0.86rem;
+    line-height: 1.65;
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  .cta {
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.18rem;
+    background: rgba(11, 11, 11, 0.35);
+    backdrop-filter: blur(10px);
+  }
+
+  .about,
+  .services,
+  .gallery,
+  .testimonials,
+  .location {
+    padding: 4.5rem 6%;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about h2,
+  .services h2,
+  .gallery h2,
+  .testimonials h2,
+  .location h2,
+  .ctaSection h2 {
+    color: #ffffff;
+    font-size: 2.7rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .about p,
+  .card p {
+    color: #cfcfcf;
+  }
+
+  .about p {
+    margin-bottom: 1.2rem;
+  }
+
+  .photoPlaceholder {
+    height: 340px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .card {
+    padding: 1.4rem;
+  }
+
+  .serviceImage {
+    height: 240px;
+    margin-bottom: 1.3rem;
+  }
+
+  .card h3 {
+    font-size: 1.45rem;
+  }
+
+  .testimonials .card {
+    padding: 2.2rem 1.4rem;
+  }
+
+  .mapPlaceholder {
+    height: 320px;
+    margin-bottom: 2.5rem;
+  }
+
+  .contactInfo {
+    gap: 1.6rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactInfo p {
+    font-size: 0.72rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer {
+    padding: 2.5rem 1.5rem;
+    line-height: 1.8;
+  }
+
+  .whatsapp {
+    right: 22px;
+    bottom: 22px;
+    width: 48px;
+    height: 48px;
+  }
 }
 
-@media(max-width: 480px) {
-  .grid, .galleryGrid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 2.5rem; }
-  .about h2, .services h2, .gallery h2 { font-size: 2.2rem; }
+@media (max-width: 480px) {
+  .header {
+    padding: 0.8rem 5%;
+  }
+
+  .logoCircle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logoText h2 {
+    font-size: 1.35rem;
+  }
+
+  .logoText span {
+    font-size: 0.48rem;
+    letter-spacing: 0.24em;
+  }
+
+  .open {
+    top: 61px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 6.5rem 5% 2.4rem;
+  }
+
+  .hero h1 {
+    max-width: 330px;
+    font-size: clamp(2.45rem, 14vw, 3.35rem);
+    line-height: 1;
+  }
+
+  .hero p {
+    max-width: 315px;
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .cta {
+    max-width: 100%;
+    padding: 0.95rem 1rem;
+  }
+
+  .about,
+  .services,
+  .gallery,
+  .testimonials,
+  .location {
+    padding: 3.5rem 5%;
+  }
+
+  .about {
+    gap: 2.5rem;
+  }
+
+  .about h2,
+  .services h2,
+  .gallery h2,
+  .testimonials h2,
+  .location h2,
+  .ctaSection h2 {
+    font-size: 2.35rem;
+    margin-bottom: 2rem;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .photoPlaceholder {
+    height: 300px;
+  }
+
+  .grid {
+    gap: 1.4rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  .serviceImage {
+    height: 220px;
+    margin-bottom: 1.2rem;
+  }
+
+  .card h3 {
+    font-size: 1.35rem;
+  }
+
+  .card p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  .testimonials .card {
+    padding: 2rem 1.3rem;
+  }
+
+  .mapPlaceholder {
+    height: 280px;
+    margin-bottom: 2rem;
+  }
+
+  .contactInfo {
+    gap: 1.3rem;
+  }
+
+  .contactInfo p {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .footer {
+    padding: 2rem 1.2rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.18rem;
+  }
+
+  .whatsapp {
+    right: 18px;
+    bottom: 18px;
+    width: 46px;
+    height: 46px;
+  }
 }
