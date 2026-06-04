@@ -206,7 +206,7 @@ export default function App() {
       </section>
 
       <footer className={styles.footer}>
-        <p>© 2026 Isabella Lopreti Studio. Direitos Reservados.</p>
+        <p>© {new Date().getFullYear()} Isabella Lopreti Studio</p>
       </footer>
 
       <a

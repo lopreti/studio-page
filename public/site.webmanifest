@@ -1,0 +1,8 @@
+{
+  "name": "Isabella Lopreti Studio",
+  "short_name": "IL Studio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}
